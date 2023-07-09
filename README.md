@@ -5,6 +5,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Available Scripts
 
 In the project directory, you can run:
+### `git init`
+
+Initialize the project's git repository
+
+### `npm install`
+
+Installing project dependencies
 
 ### `npm start`
 
@@ -68,3 +75,27 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+### 本基础项目框架采用的技术栈和第三方包如下
+
+ - React 18.2.0
+ - Ant Design UI组件库 v5
+ - React-router-dom  5.3.0
+ - sass sass-loader
+ - @craco/craco 更改脚手架配置 初始化配置 @
+ - axios
+ - redux: redux,react-redux,redux-toolkit
+ - wangEditor 富文本编辑器
+ - classNames 动态样式添加
+ - 
+
+### 注意点
+ - 在最新的`react 18.2.0` 中，如果入口文件中使用了严格模式，会导致路由切换不了，需要在`index.js`入口文件中把严格模式去掉
+  ```js
+  root.render(
+  // <React.StrictMode>
+    <App />
+  // </React.StrictMode>
+);
+  ```
