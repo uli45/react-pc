@@ -99,3 +99,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
   // </React.StrictMode>
 );
   ```
+
+####  使用步骤
+  - 1、在 `.env.development` 和 `.env.production`文件内设置 开发环境和生产环境  `baseURL`
+  - 2、`utlis/request.js`文件中，有创建好的基础`请求拦截器`和`响应拦截器`，可以根据需要更改
+  - 3、根据`React`语法创建jsx文件和路由，即可完成业务
+  - 4、`craco.config.js` 文件内有创建好的基础打包配置，可以根据需求增加`webpack`打包配置
+  - 5、项目有开启懒加载，懒加载有助于优化首屏加载速度，但是可能会遇到闪屏的情况，建议项目不大的情况下没必要开启懒加载，如果项目过大，开启懒加载会有好点的体验，但是请`自行解决闪屏问题`，作者本人是刚开始学习`React`，水平不够，如果您解决了闪屏问题，请给我提交`issues`，本人将感激不尽，认真学习。
+  
+###### 最后 
+ - ###### 给一个在B站找的黑马后台地址 `https://toutiao.itheima.net/v1_0/`

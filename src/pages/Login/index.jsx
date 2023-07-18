@@ -1,5 +1,6 @@
 import React from 'react'
 import style from './index.module.scss'
+// import logo from '@/assets/logo.png'
 import {useDispatch} from 'react-redux'
 import {asyncLogin} from '@/store/reducers/login'
 import {useHistory} from 'react-router-dom'
@@ -11,7 +12,7 @@ export default function Login () {
   const onFinish = async values => {
     delete values.remember
     try { 
-      await dispatch(asyncLogin(values))
+      // await dispatch(asyncLogin(values))
       message.success('登录成功',1)
       history.push('/layout')
     } catch (error) {
@@ -21,6 +22,7 @@ export default function Login () {
   return (
     <div className={style.root}>
       <Card className='login-container'>
+        {/* <img src={logo} alt='项目名' className='login-logo' /> */}
         <Form
           name='basic'
           initialValues={{
@@ -31,6 +33,7 @@ export default function Login () {
           onFinish={onFinish}
           autoComplete='off'
           size='large'
+          
         >
           <Form.Item
             name='mobile'

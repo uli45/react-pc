@@ -11,6 +11,7 @@ const instance = axios.create({
 instance.interceptors.request.use(
   function (config) {
     // 在发送请求之前做些什么
+    console.log(process.env.REACT_APP_BASEURL);
     const tokenObj = getToken()
     if (tokenObj && tokenObj.token) {
       config.headers.Authorization = `Bearer ${tokenObj.token}`
